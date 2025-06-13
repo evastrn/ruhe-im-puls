@@ -99,3 +99,105 @@
     to { opacity: 1; transform: translateY(0); }
   }
   
+
+
+
+
+
+
+  /* FLEXIBLE ABSCHNITTE (Text-Bild nebeneinander) */
+.section-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+  text-align: left;
+  padding-top: 2rem;
+}
+
+/* Richtungswechsel (Bild links, Text rechts) */
+.section-content.reverse {
+  flex-direction: row-reverse;
+}
+
+/* TEXT & BILD SPALTEN */
+.section .text,
+.section .image {
+  flex: 1 1 45%;
+}
+
+/* BILDER-STIL */
+.section .image img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* HEADLINE linksbündig innerhalb von Textblöcken */
+.section .text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  animation: fadeIn 2s ease;
+}
+
+/* PARAGRAPHEN innerhalb von Textblöcken */
+.section .text p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: #dcdcdc;
+}
+
+/* TRAILER (zentriert, groß) */
+.trailer-section {
+  padding: 8rem 2rem 4rem 2rem;
+  text-align: center;
+}
+
+.trailer-section h2 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  animation: fadeIn 2s ease;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 900px) {
+  .section-content,
+  .section-content.reverse {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .section .text,
+  .section .image {
+    flex: 1 1 100%;
+  }
+
+  .section .text h2 {
+    text-align: center;
+  }
+}
+
+
+
+
+.centered-section {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 6rem 2rem;
+}
+
+.centered-section h2 {
+  font-size: 3rem;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  animation: fadeIn 1s ease;
+}
+
+.centered-section p {
+  font-size: 1.4rem;
+  color: #dcdcdc;
+  margin-bottom: 2rem;
+}
