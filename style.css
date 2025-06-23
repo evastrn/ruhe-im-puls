@@ -1,111 +1,109 @@
 /* RESET + BASIS */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body, html {
-    font-family: 'Montserrat', sans-serif;
-    background-color: #513068;
-    color: #ffffff;
-    scroll-behavior: smooth;
-  }
-  
-  /* NAVIGATION */
-  .navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #513068;
-    z-index: 1000;
-    padding: 1rem 2rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  }
-  
-  .navbar ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    gap: 2rem;
-  }
-  
-  .navbar a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1.1rem;
-    padding: 0.5rem 1rem;
-    border-radius: 25px;
-    transition: background 0.3s;
-  }
-  
-  .navbar a:hover {
-    background-color: #ce80f6;
-  }
-  
-  /* ABSCHNITTE */
-  .section {
-    padding: 8rem 2rem 4rem 2rem;
-    max-width: 1000px;
-    margin: 0 auto;
-    text-align: center;
-  }
-  
-  .section h1 {
-    font-size: 3rem;
-    margin-bottom: 2rem;
-    animation: fadeIn 2s ease;
-  }
-  
-  .section p {
-    font-size: 1.3rem;
-    line-height: 1.7;
-    color: #dcdcdc;
-  }
-  
-  /* VIDEO-STIL */
-  .trailer-video {
-    width: 100%;
-    max-width: 800px;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  }
-  
-  /* BUTTON */
-  .button {
-    display: inline-block;
-    padding: 1.2rem 2.5rem;
-    margin-top: 2rem;
-    font-size: 1.2rem;
-    font-weight: 600;
-    background-color: #a6a3a3;
-    color: #ffffff;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-  }
-  
-  .button:hover {
-    background-color: #ce80f6;
-    color: #ffffff;
-  }
-  
-  /* ANIMATION */
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+body, html {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #513068;
+  color: #ffffff;
+  scroll-behavior: smooth;
+}
 
+/* NAVIGATION */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #513068;
+  z-index: 1000;
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
 
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 2rem;
+}
 
+.navbar a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  transition: background 0.3s;
+}
 
+.navbar a:hover {
+  background-color: #ce80f6;
+}
 
-  /* FLEXIBLE ABSCHNITTE (Text-Bild nebeneinander) */
+/* ABSCHNITTE */
+.section {
+  padding: 8rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.section h1,
+.section h2 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  animation: fadeIn 2s ease;
+  text-align: center;
+}
+
+.section p {
+  font-size: 1.3rem;
+  line-height: 1.7;
+  color: #dcdcdc;
+  margin-bottom: 1.5rem;
+}
+
+/* ZENTRIERTE ABSCHNITTE (z. B. Trailer, Prototyp) */
+.centered-section {
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 8rem 2rem;
+}
+
+/* VIDEO-STIL */
+.trailer-video {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* BUTTON */
+.button {
+  display: inline-block;
+  padding: 1.2rem 2.5rem;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  background-color: #a6a3a3;
+  color: #ffffff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #ce80f6;
+  color: #ffffff;
+}
+
+/* FLEXIBLE ABSCHNITTE (Text-Bild nebeneinander) */
 .section-content {
   display: flex;
   justify-content: space-between;
@@ -113,21 +111,18 @@
   gap: 4rem;
   flex-wrap: wrap;
   text-align: left;
-  padding-top: 2rem;
+  margin-top: 2rem;
 }
 
-/* Richtungswechsel (Bild links, Text rechts) */
 .section-content.reverse {
   flex-direction: row-reverse;
 }
 
-/* TEXT & BILD SPALTEN */
 .section .text,
 .section .image {
   flex: 1 1 45%;
 }
 
-/* BILDER-STIL */
 .section .image img {
   width: 100%;
   height: auto;
@@ -135,23 +130,22 @@
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
 }
 
-/* HEADLINE linksbündig innerhalb von Textblöcken */
 .section .text h2 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
   animation: fadeIn 2s ease;
 }
 
-/* PARAGRAPHEN innerhalb von Textblöcken */
 .section .text p {
   font-size: 1.2rem;
   line-height: 1.7;
   color: #dcdcdc;
+  margin-bottom: 1.5rem;
 }
 
-/* TRAILER (zentriert, groß) */
+/* TRAILER-BLOCK */
 .trailer-section {
-  padding: 8rem 2rem 4rem 2rem;
+  padding: 8rem 2rem;
   text-align: center;
 }
 
@@ -159,6 +153,17 @@
   font-size: 3rem;
   margin-bottom: 2rem;
   animation: fadeIn 2s ease;
+}
+
+/* LETZTE SEKTION EXTRA ABSTAND */
+.section:last-of-type {
+  padding-bottom: 10rem;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* RESPONSIVE DESIGN */
@@ -177,27 +182,4 @@
   .section .text h2 {
     text-align: center;
   }
-}
-
-
-
-
-.centered-section {
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 6rem 2rem;
-}
-
-.centered-section h2 {
-  font-size: 3rem;
-  color: #ffffff;
-  margin-bottom: 1.5rem;
-  animation: fadeIn 1s ease;
-}
-
-.centered-section p {
-  font-size: 1.4rem;
-  color: #dcdcdc;
-  margin-bottom: 2rem;
 }
